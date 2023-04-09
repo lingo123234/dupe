@@ -157,7 +157,7 @@ def search():
             try:
                 contactnocount = my_dict5[allcontact]
                 contactnopercentage = contactnocount / worth * 100
-                contactnocount = str(homenocount) + " " + str(homephonepercentage) + "%"
+                contactnocount = str(contactnocount) + " " + str(contactnopercentage) + "%"
 
             except:
                 contactnocount = 0
@@ -169,7 +169,6 @@ def search():
                 mobilenocount = my_dict6[allcontact]
                 mobilenopercentage = mobilenocount / worth * 100
                 mobilenocount = str(mobilenocount) + " " + str(mobilenopercentage) + "%"
-                print(mobilenopercentage)
             except:
                 mobilenocount = 0
         else:
@@ -180,12 +179,12 @@ def search():
             try:
                 worknocount = my_dict7[allcontact]
                 worknopercentage = worknocount / worth * 100
-                mobilenocount = str(worknocount) + " " + str(worknopercentage) + "%"
+                worknocount = str(worknocount) + " " + str(worknopercentage) + "%"
 
             except:
-                mobilenocount = 0
+                worknocount = 0
         else:
-            mobilenocount = 0
+            worknocount = 0
 
 
 
@@ -193,7 +192,7 @@ def search():
 
         return jsonify([{"First_Name_Match": finalcount},{"Last_Name_Match": lastcount},
                         {"EmailID_Match": emailcount},{"HOME_PHONE_Match": homenocount}, {"CONTACT_NO_Match": contactnocount},
-                        {"MOBILE_NO_Match": mobilenocount},{"WORK_PHONE_Match": mobilenocount} ,{"Total Records Found": worth}])
+                        {"MOBILE_NO_Match": mobilenocount},{"WORK_PHONE_Match": worknocount} ,{"Total Records Found": worth}])
 
 # driver function
 if __name__ == '__main__':
