@@ -111,76 +111,89 @@ def search():
 
         if first != None:
             try:
-                firstpercentage = my_dict1[first] / worth * 100
-                print(firstpercentage)
+                firstcount = my_dict1[first]
+                firstpercentage = firstcount / worth * 100
+                finalcount = str(firstcount)+ " " +str(firstpercentage)+"%"
             except:
-                firstpercentage = 0
+                finalcount = 0
         else:
-            firstpercentage = 0
+            finalcount = 0
 
         if last != None:
             try:
-                lastpercentage = my_dict1[last] / worth * 100
-                print(lastpercentage)
+                lastcount = my_dict2[last]
+                lastpercentage = lastcount / worth * 100
+                lastcount = str(lastcount) + " " + str(lastpercentage) + "%"
+
             except:
-                lastpercentage = 0
+                lastcount = 0
         else:
-            lastpercentage = 0
+            lastcount = 0
 
         if emails != None:
             try:
-                emailpercentage = my_dict3[emails] / worth * 100
-                print(emailpercentage)
+                emailcount = my_dict3[emails]
+                emailpercentage = emailcount / worth * 100
+                emailcount = str(emailcount) + " " + str(emailpercentage) + "%"
+
             except:
-                emailpercentage = 0
+                emailcount = 0
         else:
-            emailpercentage = 0
+            emailcount = 0
 
         if cntno != None:
             try:
-                homephonepercentage = my_dict4[allcontact] / worth * 100
-                print(homephonepercentage)
+                homenocount = my_dict4[allcontact]
+                homephonepercentage = homenocount / worth * 100
+                homenocount = str(homenocount) + " " + str(homephonepercentage) + "%"
+
             except:
-                homephonepercentage = 0
+                homenocount = 0
         else:
-            homephonepercentage = 0
+            homenocount = 0
 
 
         if cntno != None:
             try:
-                contactnopercentage = my_dict5[allcontact] / worth * 100
-                print(contactnopercentage)
+                contactnocount = my_dict5[allcontact]
+                contactnopercentage = contactnocount / worth * 100
+                contactnocount = str(homenocount) + " " + str(homephonepercentage) + "%"
+
             except:
-                contactnopercentage = 0
+                contactnocount = 0
         else:
-            contactnopercentage = 0
+            contactnocount = 0
 
         if cntno != None:
             try:
-                mobilenopercentage = my_dict6[allcontact] / worth * 100
+                mobilenocount = my_dict6[allcontact]
+                mobilenopercentage = mobilenocount / worth * 100
+                mobilenocount = str(mobilenocount) + " " + str(mobilenopercentage) + "%"
                 print(mobilenopercentage)
             except:
-                mobilenopercentage = 0
+                mobilenocount = 0
         else:
-            mobilenopercentage = 0
+            mobilenocount = 0
 
 
         if cntno != None:
             try:
-                worknopercentage = my_dict7[allcontact] / worth * 100
-                print(worknopercentage)
+                worknocount = my_dict7[allcontact]
+                worknopercentage = worknocount / worth * 100
+                mobilenocount = str(worknocount) + " " + str(worknopercentage) + "%"
+
             except:
-                worknopercentage = 0
+                mobilenocount = 0
         else:
-            worknopercentage = 0
+            mobilenocount = 0
 
 
 
 
 
-        return jsonify([{"First_Name_Match_COUNT": firstpercentage},{"Last_Name_Match_COUNT": lastpercentage},
-                        {"EmailID_Match_PERCENT": emailpercentage},{"HOME_PHONE_Match_PERCENT": homephonepercentage}, {"CONTACT_NO_Match_PERCENT": contactnopercentage},
-                        {"MOBILE_NO_Match_PERCENT": mobilenopercentage},{"WORK_PHONE_Match_PERCENT": worknopercentage}   ,{"Total Records Found": worth}])
+        return jsonify([{"First_Name_Match": finalcount},{"Last_Name_Match": lastcount},
+                        {"EmailID_Match": emailcount},{"HOME_PHONE_Match": homenocount}, {"CONTACT_NO_Match": contactnocount},
+                        {"MOBILE_NO_Match": mobilenocount},{"WORK_PHONE_Match": mobilenocount} ,{"Total Records Found": worth}])
 
 # driver function
 if __name__ == '__main__':
