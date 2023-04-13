@@ -113,7 +113,7 @@ def search():
             try:
                 firstcount = my_dict1[first]
                 firstpercentage = firstcount / worth * 100
-                finalcount = str(firstcount)+ " " +str(firstpercentage)+"%"
+                finalcount = str(firstcount)+ " | " +str(firstpercentage)+"%"
             except:
                 finalcount = 0
         else:
@@ -123,7 +123,7 @@ def search():
             try:
                 lastcount = my_dict2[last]
                 lastpercentage = lastcount / worth * 100
-                lastcount = str(lastcount) + " " + str(lastpercentage) + "%"
+                lastcount = str(lastcount) + " | " + str(lastpercentage) + "%"
 
             except:
                 lastcount = 0
@@ -134,7 +134,7 @@ def search():
             try:
                 emailcount = my_dict3[emails]
                 emailpercentage = emailcount / worth * 100
-                emailcount = str(emailcount) + " " + str(emailpercentage) + "%"
+                emailcount = str(emailcount) + " | " + str(emailpercentage) + "%"
 
             except:
                 emailcount = 0
@@ -145,7 +145,7 @@ def search():
             try:
                 homenocount = my_dict4[allcontact]
                 homephonepercentage = homenocount / worth * 100
-                homenocount = str(homenocount) + " " + str(homephonepercentage) + "%"
+                homenocount = str(homenocount) + " | " + str(homephonepercentage) + "%"
 
             except:
                 homenocount = 0
@@ -157,7 +157,7 @@ def search():
             try:
                 contactnocount = my_dict5[allcontact]
                 contactnopercentage = contactnocount / worth * 100
-                contactnocount = str(contactnocount) + " " + str(contactnopercentage) + "%"
+                contactnocount = str(contactnocount) + " | " + str(contactnopercentage) + "%"
 
             except:
                 contactnocount = 0
@@ -168,7 +168,7 @@ def search():
             try:
                 mobilenocount = my_dict6[allcontact]
                 mobilenopercentage = mobilenocount / worth * 100
-                mobilenocount = str(mobilenocount) + " " + str(mobilenopercentage) + "%"
+                mobilenocount = str(mobilenocount) + " | " + str(mobilenopercentage) + "%"
             except:
                 mobilenocount = 0
         else:
@@ -179,7 +179,7 @@ def search():
             try:
                 worknocount = my_dict7[allcontact]
                 worknopercentage = worknocount / worth * 100
-                worknocount = str(worknocount) + " " + str(worknopercentage) + "%"
+                worknocount = str(worknocount) + " | " + str(worknopercentage) + "%"
 
             except:
                 worknocount = 0
